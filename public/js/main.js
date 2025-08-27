@@ -7,7 +7,7 @@
 // ######## ##     ## ##           ##
 
 // data saving
-const FORMAL = true;
+const FORMAL = false;
 const EXPERIMENT_NAME = 'VerbCategorization';
 const SUBJ_NUM_SCRIPT = '/get-subject-number';
 const SAVING_SCRIPT = '/save-data';
@@ -36,9 +36,9 @@ const PRACTICE_TESTING_LIST = [
 const EXPERIMENT_VIDEOS = {
     class1: {
         lift: ["class_1/class1_lift_1.mp4", "class_1/class1_lift_2.mp4", "class_1/class1_lift_3.mp4", "class_1/class1_lift_4.mp4"],
-        lower: ["class_1/class1_lower_1.mp4", "class_1/class1_lower_2.mp4", "class_1/class1_lower_4.mp4"],
+        lower: ["class_1/class1_lower_1.mp4", "class_1/class1_lower_2.mp4", "class_1/class1_lower_3.mp4", "class_1/class1_lower_4.mp4"],
         pull: ["class_1/class1_pull_1.mp4", "class_1/class1_pull_2.mp4", "class_1/class1_pull_3.mp4", "class_1/class1_pull_4.mp4"],
-        push: ["class_1/class1_push_1.mp4", "class_1/class1_push_2.mp4", "class_1/class1_push_3.mp4"],
+        push: ["class_1/class1_push_1.mp4", "class_1/class1_push_2.mp4", "class_1/class1_push_3.mp4", "class_1/class1_push_4.mp4"],
         tote: ["class_1/class1_tote_1.mp4", "class_1/class1_tote_2.mp4", "class_1/class1_tote_3.mp4", "class_1/class1_tote_4.mp4"]
     },
     class2: {
@@ -51,15 +51,15 @@ const EXPERIMENT_VIDEOS = {
     class3:{
         fasten: ["class_3/class3_fasten_1.mp4", "class_3/class3_fasten_2.mp4", "class_3/class3_fasten_3.mp4", "class_3/class3_fasten_4.mp4"],
         pin: ["class_3/class3_pin_1.mp4", "class_3/class3_pin_2.mp4", "class_3/class3_pin_3.mp4", "class_3/class3_pin_4.mp4"],
-        stick: ["class_3/class3_stick_1_new.mp4", "class_3/class3_stick_2.mp4", "class_3/class3_stick_3.mp4", "class_3/class3_stick_4.mp4"],
+        stick: ["class_3/class3_stick_1.mp4", "class_3/class3_stick_2.mp4", "class_3/class3_stick_3.mp4", "class_3/class3_stick_4.mp4"],
         strap: ["class_3/class3_strap_1.mp4", "class_3/class3_strap_2.mp4", "class_3/class3_strap_3.mp4", "class_3/class3_strap_4.mp4"],
-        tape: ["class_3/class3_tape_1.mp4", "class_3/class3_tape_2_new.mp4", "class_3/class3_tape_3.mp4", "class_3/class3_tape_4_new.mp4"]
+        tape: ["class_3/class3_tape_1.mp4", "class_3/class3_tape_2.mp4", "class_3/class3_tape_3.mp4", "class_3/class3_tape_4.mp4"]
     },
     class4: {
-        chip: ["class_4/class_4_chip_3.mp4", "class_4/class_4_chip_4.mp4", "class_4/class4_chip_1.mp4"],
-        crush: ["/class_4/class4_crush_1.mp4", "class_4/class4_crush_2.mp4", "class_4/class4_crush_3.mp4", "class_4/class4_crush_4.mp4"],
-        // rip: ["class_4/class4_rip_1.mp4", "class_4/class4_rip_2.mp4"],
-        // shatter: ["class_4/class4_shatter_1.mp4", "class_4/class4_shatter_2.mp4"],
+        chip: ["class_4/class4_chip_1.mp4", "class_4/class4_chip_2.mp4", "class_4/class4_chip_3.mp4", "class_4/class4_chip_4.mp4"],
+        crush: ["class_4/class4_crush_1.mp4", "class_4/class4_crush_2.mp4", "class_4/class4_crush_3.mp4", "class_4/class4_crush_4.mp4"],
+        rip: ["class_4/class4_rip_1.mp4", "class_4/class4_rip_2.mp4", "class_4/class4_rip_3.mp4", "class_4/class4_rip_4.mp4"],
+        shatter: ["class_4/class4_shatter_1.mp4", "class_4/class4_shatter_2.mp4", "class_4/class4_shatter_3.mp4", "class_4/class4_shatter_4.mp4"],
         snap: ["class_4/class4_snap_1.mp4", "class_4/class4_snap_2.mp4", "class_4/class4_snap_3.mp4", "class_4/class4_snap_4.mp4"]
     }
 };
@@ -124,10 +124,10 @@ $(document).ready(function() {
     subj = new Subject(subj_options);
     subj.id = subj.getID(ID_GET_VARIABLE_NAME);
     console.log(subj.id);
-    if (!subj.id) {
-        subj.id = 'testuser';
-        subj.validID = true;
-    }// if part is for testing on local server, needed to be removed later
+    // if (!subj.id) {
+    //     subj.id = 'testuser';
+    //     subj.validID = true;
+    // }// if part is for testing on local server, needed to be removed later
 
     subj.saveVisit();
     if (subj.phone) {
