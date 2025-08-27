@@ -3,6 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const cors = require('cors');
 
+const DATA_ROOT = process.env.DATA_DIR || 'data'; // default local 'data' for dev
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -25,7 +27,7 @@ app.post('/save-data', (req, res) => {
         const { directory_path, file_name, data } = req.body;
 
         // Create directory if it doesn't exist (same as PHP mkdir)
-        const fullDirPath = path.join(__dirname, directory_path);
+        const fullDirPath = path.join(__dirname, DATA_ROOT, directory_path);
         if (!fs.existsSync(fullDirPath)) {
             fs.mkdirSync(fullDirPath, { recursive: true, mode: 0o777 });
         }
@@ -50,7 +52,7 @@ app.post('/get-subject-number', (req, res) => {
     try {
         const { directory_path, file_name } = req.body;
 
-        const fullDirPath = path.join(__dirname, directory_path);
+        const fullDirPath = path.join(__dirname, DATA_ROOT, directory_path);
         const filePath = path.join(fullDirPath, file_name);
 
         let subjNum = 1;

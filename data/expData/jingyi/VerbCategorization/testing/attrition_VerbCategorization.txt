@@ -1,0 +1,2 @@
+subjNum	startDate	startTime	id	userAgent	inView	viewportW	viewportH
+1	2025-08-27	06:34:05	12	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36	true	1920	1080

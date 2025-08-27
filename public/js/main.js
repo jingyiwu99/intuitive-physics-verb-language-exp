@@ -17,7 +17,7 @@ const ATTRITION_FILE = 'attrition_' + EXPERIMENT_NAME + '.txt';
 const TASK_FILE = 'task_' + EXPERIMENT_NAME + '.txt';
 // const RATING_FILE = 'rating_' + EXPERIMENT_NAME + '.txt';
 const SUBJ_FILE = 'subj_' + EXPERIMENT_NAME + '.txt';
-const SAVING_DIR = FORMAL ? 'expData/jingyi/'+EXPERIMENT_NAME+'/formal' : 'expData/jingyi/'+EXPERIMENT_NAME+'/testing';
+const SAVING_DIR = FORMAL ? 'jingyi/'+EXPERIMENT_NAME+'/formal' : 'jingyi/'+EXPERIMENT_NAME+'/testing';
 const ID_GET_VARIABLE_NAME = 'PROLIFIC_PID';
 const COMPLETION_URL = 'https://app.prolific.com/submissions/complete?cc=XXXXXXX';
 
