@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="cvlstudy.psych.ucla.edu" id="78007040-bb66-4a46-a8a6-99e6f1ef96ea" port="22" nameFormat="DESCRIPTIVE" username="cvlstudy" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>

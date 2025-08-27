@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9bf628fb-c90a-4cb0-949a-2949725518c6" name="cvls">
+        <fileTransfer rootFolder="/home/cvlstudy" accessType="SFTP" host="cvlstudy.psych.ucla.edu" port="22" sshConfigId="78007040-bb66-4a46-a8a6-99e6f1ef96ea" sshConfig="cvlstudy@cvlstudy.psych.ucla.edu:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

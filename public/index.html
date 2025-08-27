@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang='en' translate='no'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>UCLA Experiment</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Raleway&display=swap' />
+    <link rel='stylesheet' href='css/style.css' />
+</head>
+
+<body>
+<noscript>It seems that JavaScript is disabled in your browser. Please go to settings and enable JavaScript for this experiment.</noscript>
+
+<!--======== INSTRUCTIONS ========-->
+<div class='page-box fixed-box' id='instr-box'>
+    <p class='instructions' id='instr-text'></p>
+    <img id='instr-img' src='media/blank.png' draggable='false' alt='Image Error: Please email jingyiwu99@g.ucla.edu with the message "IMG-ERROR" to receive payment.'></img>
+    <button class='button' id='next-button' onclick='instr.next()'>Next</button>
+    <!--======== INFORMED CONSENT FORM ========-->
+    <div class='page-box' id='consent-box'>
+        <div class='consent-instr'>To conduct this experiment, we need to include this information sheet:</div>
+        <div class='form-area'>
+            <strong>CONSENT FORM</strong><br /><br />
+            <strong>Introduction</strong><br>
+            You are invited to participate in a study that examines how humans respond to nonverbal behaviors in computer-based videos of other real humans. This research is being conducted through the UCLA Department of Communication. You may be able to participate in this study if you are at least 18 years of age, proficient in English, and have normal to corrected vision. Your participation in this study is voluntary.
+            <br><br>
+            <strong>Why is this study being done?</strong><br>
+            The purpose of this study is to better understand how humans perceive and react to nonverbal behaviors. This study is expected to add knowledge to our understanding of social perception.
+            <br><br>
+            <strong>What will happen if I decide to take part in this study?</strong><br>
+            If you volunteer to take part in this study, the researcher will ask you to report your subjective response to a series of videos presented on a 2D computer screen. You will report by moving the cursor or typing. Further instructions pertaining to the particular task will be presented on the computer screen preceding the task. This study may take place on campus or through the internet in the privacy of your home depending on how you are recruited.The number of participants conducting this experiment simultaneously with you may vary. If you are the only participant, you will complete the task by yourself. If there are other participants logging into the experiment at the same time, you will conduct the experiment together with them.
+            <br><br>
+            <strong>How long will I be in this study?</strong><br>
+            Your participation in this study will be a one-time event that should last approximately from half an hour to an hour.
+            <br><br>
+            <strong>What kind of potential risks or discomforts could I expect?</strong><br>
+            There are no anticipated risks.
+            <br><br>
+            <strong>Are there any benefits if I participate?</strong><br>
+            There will be no direct benefit to you from participating in this study. However, the study will help researchers to learn more about human cooperation. Ultimately, this study will promote our understanding of social perception in humans and can potentially provide human benchmarks for developing artificial intelligence with social commonsense and improve models of human-computer cooperation.
+            <br><br>
+            <strong>How will information about me and my participation be kept confidential?</strong><br>
+            Any information that is obtained in connection with this study and that can identify you will remain confidential. It will be disclosed only with your permission or as required by law. No identifiable information will be collected during the experimental trials. The research team have access to study data and records to monitor the study. Publications and/or presentations that result from this study will not contain identifying information.
+            The researchers intend to keep the research data and records indefinitely for future research.
+            The visual data will be confined solely to the game screen during the experiment. Only the movements of the in-game agent, controlled by the participants through a mouse or keyboard, will be recorded. There will be no recording of participants' physical appearance or facial expressions.
+            The study involves recording audio, primarily to analyze coordination during the game. This may include voice communication or text-to-speech interactions between participants. Importantly, these recordings will not contain any personal information and will be strictly related to the gameplay.
+            <br><br>
+            <strong>Will I be paid for my participation?</strong><br>
+            You will receive 1 hour of credit for your communication class if you sign up for the study through the UCLA Communication Department Subject Pool or $12 compensation if you were recruited from an online experiment platform. In addition, depending on the condition, you may be able to earn a small monetary bonus for doing well at the task, which will be disbursed upon experiment completion via Bruin DirectDeposit if you signed up on the UCLA Communication Department Subject Pool or cash for alternative recruitment methods.
+            <br><br>
+            <strong>What are my rights if I take part in this study?</strong><br>
+            You can choose whether or not you want to be in this study, and you may withdraw your consent and discontinue participation at any time.
+            Whatever decision you make, there will be no penalty to you, and no loss of benefits to which you were otherwise entitled.
+            <br><br>
+            <strong>Who can I contact if I have questions about this study?</strong><br>
+            You may contact Siyi Gong at alicegong@ucla.edu or Tao Gao (Principal Investigator) at taogao@ucla.edu with any questions or concerns about the research or your participation in this study.
+            If you have questions about your rights while taking part in this study, or if you have concerns or suggestions and want to talk to someone other than the researchers, you may contact the Office of the Human Research Protection Program by phone (310) 206-2040; by email: participants@research.ucla.edu or by mail: Box 951694, Los Angeles, CA 90095-1694.
+            <br><br>
+        </div>
+    </div>
+</div>
+
+<!--&lt;!&ndash;======== INSTRUCTIONS QUIZ ========&ndash;&gt;-->
+<!--<div class='page-box fixed-box' id='quiz-box'>-->
+<!--    <div class='bold'>What is your job in this experiment?</div>-->
+<!--    <label><div class='option'><input class='radio' type='radio' name='quiz' value='forgot' /><p class='option-text'>Select this option if you do not remember the instructions.</p></div></label>-->
+<!--    <label><div class='option'><input class='radio' type='radio' name='quiz' value='option1' /><p class='option-text'>Option 1 (correct)</p></div></label>-->
+<!--    <label><div class='option'><input class='radio' type='radio' name='quiz' value='option2' /><p class='option-text'>Option 2</p></div></label>-->
+<!--    <label><div class='option'><input class='radio' type='radio' name='quiz' value='option3' /><p class='option-text'>Option 3</p></div></label>-->
+<!--    <label><div class='option'><input class='radio' type='radio' name='quiz' value='option4' /><p class='option-text'>Option 4</p></div></label>-->
+<!--    <label><div class='option'><input class='radio' type='radio' name='quiz' value='option5' /><p class='option-text'>Option 5</p></div></label>-->
+<!--    <button class='button' onclick='submit_instruction_quiz()'>SUBMIT</button>-->
+<!--    <p class='warning' id='quiz-warning'></p>-->
+<!--</div>-->
+
+<!--======== PRACTICE LEARNING ========-->
+<div class = 'page-box' id="practiceLearningBox" style="display: none;">
+    <p class="progress-bar" id="practiceLearningProgress"></p>
+    <p class="guidelines" id="practiceLearningGuideline">Look carefully at each image. Then click "Next."</p>
+    <div class="show-area">
+        <img id="practiceLearningImg" src="" alt="Practice Learning Image" style="max-width: 600px; display: block; margin: 20px auto;">
+    </div>
+    <button class="button" id="practiceLearningNextBtn" style="display: none;">Next</button>
+</div>
+
+<!--======== PRACTICE TESTING ========-->
+<div class = 'page-box' id="practiceTestingBox" style="display: none;">
+    <p class="progress-bar" id="practiceTestingProgress"></p>
+    <p class="guidelines" id="practiceTestingGuideline">Does this image belong to the same group as the first five images?</p>
+    <div class="show-area">
+        <img id="practiceTestingImg" src="" alt="Practice Testing Image" style="max-width: 600px; display: block; margin: 20px auto;">
+    </div>
+    <div class="button-pair">
+        <button id="practiceYesBtn" class="button">Yes</button>
+        <button id="practiceNoBtn" class="button">No</button>
+    </div>
+</div>
+<!--======== EXPERIMENT LEARNING ========-->
+<div class = 'page-box' id="expLearningBox" style="display: none;">
+    <p class="progress-bar" id="expLearningProgress"></p>
+    <p class="guidelines" id="expLearningGuideline">Click the video to play</p>
+    <video class="vid" muted id="expLearningVid">
+        <source type="video/mp4">
+    </video>
+    <button class="button" id="expLearningNextBtn" style="display: none;">Next</button>
+</div>
+<!--======== EXPERIMENT REVIEW ========-->
+<div class = 'page-box' id="expReviewBox" style="display: none;">
+    <p class="progress-bar" id="expReviewProgress"></p>
+    <p class="guidelines" id="expReviewGuideline">Click the video to play</p>
+    <video class="vid" muted id="expReviewVid">
+        <source type="video/mp4">
+    </video>
+    <button class="button" id="expReviewNextBtn" style="display: none;">Next</button>
+</div>
+<!--======== EXPERIMENT TESTING ========-->
+<div class = 'page-box' id="expTestingBox" style="display: none;">
+    <p class="progress-bar" id="expTestingProgress"></p>
+    <p class="guidelines" id="expTestingGuideline">Click the video to play</p>
+    <video class="vid" muted id="expTestingVid">
+        <source type="video/mp4">
+    </video>
+    <div class="button-pair" style="display: none;">
+        <button id="expYesBtn" data-response="1" class="button">Yes</button>
+        <button id="expNoBtn" data-response="0" class="button">No</button>
+    </div>
+</div>
+
+<!-- Hidden video elements for buffering -->
+<video id="learningBufferVid" style="display:none;" preload="auto" muted></video>
+<video id="reviewBufferVid" style="display:none;" preload="auto" muted></video>
+<video id="testingBufferVid" style="display:none;" preload="auto" muted></video>
+
+<!--======== DEBRIEFING QUESTIONS ========-->
+<div class='page-box' id='questions-box'>
+    <div class='question'>
+        You are almost done! Please answer these last few questions:
+    </div>
+    <div class='question'>
+        <p class='bold'>Did you encounter any technical problems in this experiment? If you did, please describe the issues you've encountered.</p>
+        <p class='small-dim'>You will receive payment regardless of what your answer is here. Please be honest for science! Thanks!</p>
+        <textarea id='technical_issues'></textarea>
+        <p class='warning' id='technical_issues-warning'>Please answer this question to complete the experiment. Thank you!</p>
+    </div>
+
+    <div class='question'>
+        <p class='bold'>What do you think is the purpose of this experiment?</p>
+        <p class='small-dim'>You will receive payment regardless of what your answer is here. Please be honest for science! Thanks!</p>
+        <textarea id='experiment_purpose'></textarea>
+        <p class='warning' id='experiment_purpose-warning'>Please answer this question to complete the experiment. Thank you!</p>
+    </div>
+
+    <div class='question'>
+        <p class='bold'>What criteria did you use to categorize the actions? What shared characteristics or patterns did you perceive?</p>
+        <p class='small-dim'>You will receive payment regardless of what your answer is here. Please be honest for science! Thanks!</p>
+        <textarea id='strategy'></textarea>
+        <p class='warning' id='strategy-warning'>Please answer this question to complete the experiment. Thank you!</p>
+    </div>
+
+    <div class='question'>
+        <p class='bold'>Are you curious whether people who speak different languages perceive the world differently? So are we. To start, could you tell us what your first language is?</p>
+        <p class='small-dim'>You will receive payment regardless of what your answer is here. Please be honest for science! Thanks!</p>
+        <textarea id='first_language'></textarea>
+        <p class='warning' id='first_language-warning'>Please answer this question to complete the experiment. Thank you!</p>
+    </div>
+
+    <div class='question'>
+        <p class='bold'>What is your primary language for now?</p>
+        <p class='small-dim'>You will receive payment regardless of what your answer is here. Please be honest for science! Thanks!</p>
+        <textarea id='primary_language'></textarea>
+        <p class='warning' id='primary_language-warning'>Please answer this question to complete the experiment. Thank you!</p>
+    </div>
+
+    <div class='question'>
+        <p class='bold'>What is your gender?</p>
+        <label><div class='option'><input class='radio' type='radio' name='gender' value='F' /><p class='option-text'>Female</p></div></label>
+        <label><div class='option'><input class='radio' type='radio' name='gender' value='M' /><p class='option-text'>Male</p></div></label>
+        <label><div class='option'><input class='radio' type='radio' name='gender' value='O' /><p class='option-text'>Other</p></div></label>
+        <label><div class='option'><input class='radio' type='radio' name='gender' value='N' /><p class='option-text'>I would rather not say</p></div></label>
+        <p class='warning' id='gender-warning'>Please answer this question to complete the experiment. Thank you!</p>
+    </div>
+
+    <div class='question'>
+        <p class='bold'>What is your age?</p>
+        <input type='number' id='age' min='0' max='150'/>
+        <p class='warning' id='age-warning'>Please give a valid answer for this question. Thank you!</p>
+    </div>
+    <button class='button' onclick='submit_debriefing_questions()'>SUBMIT</button>
+</div>
+
+<!--======== DEBRIEFING ========-->
+<div class='page-box' id='debriefing-box' style = "display: none">
+    <p class='instructions'>Now you are done with the experiment. Click 'End' to get directed back to Prolific! Thank you very much!<br /><br />
+        Interested in what we are testing? See below for more information.</p>
+    <button class='button' onclick='go_to_completion_page()'>End</button>
+    <div class='debriefing-area'>
+        <strong>Debriefing Sheet</strong><br />
+        The goal of this experiment was to investigate how people learn and generalize verb categories based on observed actions. There were no right or wrong answers; instead, we analyze your choices to understand patterns in human learning and generalization.<br /><br />
+
+        If you have any questions, please feel free to contact the researcher at jingyiwu99@g.ucla.edu.
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js'></script>
+<script src='js/func.js'></script>
+<script src='js/subj.js'></script>
+<script src='js/task.js'></script>
+<script src='js/instr.js'></script>
+<script src='js/main.js'></script>
+</body>
+
+</html>
