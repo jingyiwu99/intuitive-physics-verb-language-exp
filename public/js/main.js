@@ -19,7 +19,7 @@ const TASK_FILE = 'task_' + EXPERIMENT_NAME + '.txt';
 const SUBJ_FILE = 'subj_' + EXPERIMENT_NAME + '.txt';
 const SAVING_DIR = FORMAL ? 'jingyi/'+EXPERIMENT_NAME+'/formal' : 'jingyi/'+EXPERIMENT_NAME+'/testing';
 const ID_GET_VARIABLE_NAME = 'PROLIFIC_PID';
-const COMPLETION_URL = 'https://app.prolific.com/submissions/complete?cc=C7F8JPQ0';
+const COMPLETION_URL = 'https://app.prolific.com/submissions/complete?cc=CDAFVRN9';
 
 // stimuli
 const STIM_PATH = 'media/';
