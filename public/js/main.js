@@ -7,7 +7,7 @@
 // ######## ##     ## ##           ##
 
 // data saving
-const FORMAL = true;
+const FORMAL = false;
 const EXPERIMENT_NAME = 'VerbCategorization';
 const SUBJ_NUM_SCRIPT = '/get-subject-number';
 const SAVING_SCRIPT = '/save-data';
@@ -19,7 +19,7 @@ const TASK_FILE = 'task_' + EXPERIMENT_NAME + '.txt';
 const SUBJ_FILE = 'subj_' + EXPERIMENT_NAME + '.txt';
 const SAVING_DIR = FORMAL ? 'jingyi/'+EXPERIMENT_NAME+'/formal' : 'jingyi/'+EXPERIMENT_NAME+'/testing';
 const ID_GET_VARIABLE_NAME = 'PROLIFIC_PID';
-const COMPLETION_URL = 'https://app.prolific.com/submissions/complete?cc=CDAFVRN9';
+const COMPLETION_URL = 'https://app.prolific.com/submissions/complete?cc=XXXXXXXX';
 
 // stimuli
 const STIM_PATH = 'media/';
@@ -35,32 +35,52 @@ const PRACTICE_TESTING_LIST = [
 
 const EXPERIMENT_VIDEOS = {
     class1: {
-        lift: ["class_1/class1_lift_1.mp4", "class_1/class1_lift_2.mp4", "class_1/class1_lift_3.mp4", "class_1/class1_lift_4.mp4"],
-        lower: ["class_1/class1_lower_1.mp4", "class_1/class1_lower_2.mp4", "class_1/class1_lower_3.mp4", "class_1/class1_lower_4.mp4"],
-        pull: ["class_1/class1_pull_1.mp4", "class_1/class1_pull_2.mp4", "class_1/class1_pull_3.mp4", "class_1/class1_pull_4.mp4"],
-        push: ["class_1/class1_push_1.mp4", "class_1/class1_push_2.mp4", "class_1/class1_push_3.mp4", "class_1/class1_push_4.mp4"],
-        tote: ["class_1/class1_tote_1.mp4", "class_1/class1_tote_2.mp4", "class_1/class1_tote_3.mp4", "class_1/class1_tote_4.mp4"]
+        lift: ["The person lifts a stack of towels.", "The person lifts a dumbbell by curling their arm at the elbow.",
+            "The person lifts a box upward.", "The person lifts a plastic bag."],
+        lower: ["The person lowers a cup.", "The person lowers a bowl.",
+            "The person lowers a trash bag.", "The person lowers a stuffed animal."],
+        pull: ["The person pulls the door.", "The person pulls a loose thread from their sweater.",
+            "The person pulls the laptop closer.", "The person pulls luggage."],
+        push: ["The person pushes a wheeled chair.", "The person pushes a pile of clothes to the other side.",
+            "The person pushes a stack of hardcover.", "The person pushes the door."],
+        tote: ["The person totes a heavy backpack across the street.", "The person totes a bulky shopping bag across the pavement.",
+            "The person totes a bucket filled with water across the room.", "The person totes a stuffed tote bag across the lobby."]
     },
     class2: {
-        flick: ["class_2/class2_flick_1.mp4", "class_2/class2_flick_2.mp4", "class_2/class2_flick_3.mp4", "class_2/class2_flick_4.mp4"],
-        kick: ["class_2/class2_kick_1.mp4", "class_2/class2_kick_2.mp4", "class_2/class2_kick_3.mp4", "class_2/class2_kick_4.mp4"],
-        shove: ["class_2/class2_shove_1.mp4", "class_2/class2_shove_2.mp4", "class_2/class2_shove_3.mp4", "class_2/class2_shove_4.mp4"],
-        slide: ["class_2/class2_slide_1.mp4", "class_2/class2_slide_2.mp4", "class_2/class2_slide_3.mp4", "/class_2/class2_slide_4.mp4"],
-        throw: ["class_2/class2_throw_1.mp4", "class_2/class2_throw_2.mp4", "class_2/class2_throw_3.mp4", "class_2/class2_throw_4.mp4"]
+        flick: ["The person flicks a bread crumb.", "The person flicks a marble.",
+            "The person flicks a piece of dirt off of their shirt.", "The person flicks a small crumpled paper ball."],
+        kick: ["The person kicks the soccer ball.", "The person kicks an inflatable ball into the air.",
+            "The person kicks an empty bottle.", "The person kicks the door open."],
+        shove: ["The person shoves a shopping cart.", "The person shoves the heavy gate open.",
+            "The person shoves the punching bag.", "The person shoves a freestanding sign."],
+        slide: ["The person slides a notebook across a table.", "The person slides an ice cube across a smooth table.",
+            "The person slides a pen across the desk.", "The person slides a bar of soap across the table."],
+        throw: ["The person throws a notebook into their backpack.", "The person throws a used tea bag in the trash can.",
+            "The person throws the paper airplane.", "The person throws glitter."]
     },
     class3:{
-        fasten: ["class_3/class3_fasten_1.mp4", "class_3/class3_fasten_2.mp4", "class_3/class3_fasten_3.mp4", "class_3/class3_fasten_4.mp4"],
-        pin: ["class_3/class3_pin_1.mp4", "class_3/class3_pin_2.mp4", "class_3/class3_pin_3.mp4", "class_3/class3_pin_4.mp4"],
-        stick: ["class_3/class3_stick_1.mp4", "class_3/class3_stick_2.mp4", "class_3/class3_stick_3.mp4", "class_3/class3_stick_4.mp4"],
-        strap: ["class_3/class3_strap_1.mp4", "class_3/class3_strap_2.mp4", "class_3/class3_strap_3.mp4", "class_3/class3_strap_4.mp4"],
-        tape: ["class_3/class3_tape_1.mp4", "class_3/class3_tape_2.mp4", "class_3/class3_tape_3.mp4", "class_3/class3_tape_4.mp4"]
+        fasten: ["The person fastens the straps of the helmet.", "The person fastens the seat belt.",
+            "The person fastens the top of the trash bag.", "The person fastens an apron."],
+        pin: ["The person pins the extra fabric to their shirt.", "The person pins a sheet of paper to the wall.",
+            "The person pins a name tag to their shirt.", "The person pins the photos to the board."],
+        stick: ["The person sticks the sticker on the cover of the notebook.", "The person sticks a playing card to their forehead.",
+            "The person sticks an adhesive hook onto the wall.", "The person sticks a Post-it note to the laptop."],
+        strap: ["The person straps a suitcase with a luggage strap.", "The person straps a stuffed animal to a chair.",
+            "The person straps a pile of books together.", "The person straps a box to the trolley."],
+        tape: ["The person tapes a piece of paper to the wall.", "The person tapes a spoon onto the side of a glass jar.",
+            "The person tapes a torn page back into the damaged notebook.", "The person tapes a leaf onto the cover of the notebook."]
     },
     class4: {
-        chip: ["class_4/class4_chip_1.mp4", "class_4/class4_chip_2.mp4", "class_4/class4_chip_3.mp4", "class_4/class4_chip_4.mp4"],
-        crush: ["class_4/class4_crush_1.mp4", "class_4/class4_crush_2.mp4", "class_4/class4_crush_3.mp4", "class_4/class4_crush_4.mp4"],
-        rip: ["class_4/class4_rip_1.mp4", "class_4/class4_rip_2.mp4", "class_4/class4_rip_3.mp4", "class_4/class4_rip_4.mp4"],
-        shatter: ["class_4/class4_shatter_1.mp4", "class_4/class4_shatter_2.mp4", "class_4/class4_shatter_3.mp4", "class_4/class4_shatter_4.mp4"],
-        snap: ["class_4/class4_snap_1.mp4", "class_4/class4_snap_2.mp4", "class_4/class4_snap_3.mp4", "class_4/class4_snap_4.mp4"]
+        chip: ["The person chips a piece off the chocolate bar.", "The person chips a piece off the brick.",
+            "The person chips the edge of the plate.", "The person chips at the ice."],
+        crush: ["The person crushes an empty can.", "The person crushes a cracker.",
+            "The person crushes a paper cup with their foot.", "The person crushes a paper origami."],
+        rip: ["The person rips a sheet of paper in half.", "The person rips a piece of cloth.",
+            "The person rips open a envelope along the perforated line.", "The person rips petals off of a flower."],
+        shatter: ["The person shatters a vase.", "The person shatters the a mirror.",
+            "The person shatters a glass bottle.", "The person shatters a porcelain spoon."],
+        snap: ["The person snaps a chopstick in half.", "The person snaps a stick.",
+            "The person snaps a cookie.", "The person snaps a piece of bread."]
     }
 };
 
@@ -308,8 +328,8 @@ INSTRUCTIONS[1] =  [show_maximize_image, enter_fullscreen, "For this experiment 
 INSTRUCTIONS[2] = [hide_instr_img, show_no_music_image, "Please also turn off any music you are playing. Music is known to affect this kind of studies, and it will make your data unusable."];
 INSTRUCTIONS[3] = [hide_instr_img, show_consent, "You can press SPACE to start. Please focus after you start. (Don\'t switch to other windows or tabs!)"];
 INSTRUCTIONS[4] = [false, false, "We'll show you some instructions in the next few pages.<br /><br />Please read carefully, and avoid using the refresh or back buttons."];
-INSTRUCTIONS[5] = [false, false, "Your task is to first watch "+ ExpLearningTrials +" actions from the same category.<br /><br />Then, you will watch a new set of actions and decide whether each one belongs to the same category as the first "+ ExpLearningTrials +" actions."];
-INSTRUCTIONS[6] = [false, false, "The whole experiment will take around 20 minutes.<br /><br />To help you get familiar with the task, you'll first complete a short practice round."];
+INSTRUCTIONS[5] = [false, false, "Your task is to first read "+ ExpLearningTrials +" descriptions of actions from the same category.<br /><br />Then, you will read a new set of descriptions and decide whether each one belongs to the same category as the first "+ ExpLearningTrials +" descriptions."];
+INSTRUCTIONS[6] = [false, false, "The whole experiment will take around 15 minutes.<br /><br />To help you get familiar with the task, you'll first complete a short practice round."];
 //practice phase
 INSTRUCTIONS[7] = [false, false, "During the practice, you will see " + PracticeLearningTrials +" images, shown one at a time."];
 INSTRUCTIONS[8] = [false, false, "Try to figure out what they have in common.<br /><br />This will help you finish the categorization task later."]
@@ -322,15 +342,15 @@ INSTRUCTIONS[14] = [false, false, "Well done! You understand the categorization 
 INSTRUCTIONS[15] = [false, false, "Remember: The category from the practice is just for learning.<br /><br />It has no relevance to the actual experiment."];
 // Main Experiment
 INSTRUCTIONS[16] = [false, false, "The real experiment  consists of three sessions."];
-INSTRUCTIONS[17] = [false, false, "In the first session, you will watch "+ ExpLearningTrials +" actions that belong to the same category."];
-INSTRUCTIONS[18] = [false, false, "Click the video to play it, and click \"Next\" to continue.<br /><br />You can play each video up to three times."];
-INSTRUCTIONS[19] = [false, false, "Pay attention to the commonness of these actions &mdash; this will help your categorization later."];
-INSTRUCTIONS[20] = [false, false, "Now, let's begin by watching "+ ExpLearningTrials +" actions."];
+INSTRUCTIONS[17] = [false, false, "In the first session, you will read "+ ExpLearningTrials +" descriptions of actions that belong to the same category."];
+INSTRUCTIONS[18] = [false, false, "Please read the description carefully, and click \"Next\" to continue."];
+INSTRUCTIONS[19] = [false, false, "Pay attention to the commonness of these actions described in the sentences &mdash; this will help your categorization later."];
+INSTRUCTIONS[20] = [false, false, "Now, let's begin by reading "+ ExpLearningTrials +" descriptions of actions."];
 INSTRUCTIONS[21] = [show_experiment_learning, false, ""];
-INSTRUCTIONS[22] = [false, false, "In the second session, you\'ll watch some new actions.<br /><br />But you don’t need to make any judgments."];
-INSTRUCTIONS[23] = [false, false, "This part is simply to help you get familiar with the types of actions you\'ll see in the actual categorization task.<br /><br />Each video can be played only once."];
+INSTRUCTIONS[22] = [false, false, "In the second session, you\'ll read some new descriptions of actions.<br /><br />But you don’t need to make any judgments."];
+INSTRUCTIONS[23] = [false, false, "This part is simply to help you get familiar with the types of actions you\'ll read in the actual categorization task."];
 INSTRUCTIONS[24] = [show_experiment_review, false, ""];
-INSTRUCTIONS[25] = [false, false, "In the third session, you will watch " + ExpTestingNumber + " trials.<br /><br />Also, each video can be played up to three times."];
+INSTRUCTIONS[25] = [false, false, "In the third session, you will read " + ExpTestingNumber + " descriptions of actions."];
 INSTRUCTIONS[26] = [show_experiment_testing, false, ""];
 
 
@@ -574,32 +594,14 @@ function show_experiment_testing() {
 function renderTrialScreen(phase, last, thisTrial, nextTrial, stimPath) {
     // For LEARNING phase
     if (phase === "learning") {
-        const videoPath = stimPath + thisTrial.file;
-        $("#expLearningVid").attr("src", videoPath);
+        const sentence = thisTrial.file;
+        $("#expLearningSentence").text(sentence);
 
         $("#expLearningBox").show();
         $("#expReviewBox, #expTestingBox").hide();
 
-        // Reset play count
-        const $vid = $("#expLearningVid");
-        $vid.data("playCount", 0);
-        $vid[0].load();  // reload new video
-
-        // 🎯 BUFFER NEXT VIDEO IN LEARNING PHASE
-        if (nextTrial) {
-            const nextVideoPath = stimPath + nextTrial.file;
-            const bufferElement = document.getElementById('learningBufferVid');
-            buffer_video(
-                bufferElement,
-                nextVideoPath
-            );
-        }
-
-        // Set up click + end handlers
-        $vid.off("click").on("click", handleVideoClick);
-        $vid.off("ended").on("ended", handleVideoEnded);
-
-        $("#expLearningNextBtn").hide(); // hidden until video ends
+        // Show Next button immediately (or after a delay if you want)
+        $("#expLearningNextBtn").show().prop("disabled", false).removeClass("inactive");
         $("#expLearningNextBtn").off("click").on("click", function () {
             ExperimentTasks.end("NA");
         });
@@ -611,37 +613,19 @@ function renderTrialScreen(phase, last, thisTrial, nextTrial, stimPath) {
 
     // For REVIEW phase (same structure as learning)
     else if (phase === "review") {
-        const videoPath = stimPath + thisTrial.file;
-        $("#expReviewVid").attr("src", videoPath);
+        const sentence = thisTrial.file;
+        $("#expReviewSentence").text(sentence);
 
         $("#expReviewBox").show();
         $("#expLearningBox, #expTestingBox").hide();
 
-        // Reset play count
-        const $vid = $("#expReviewVid");
-        $vid.data("playCount", 0);
-        $vid[0].load();  // reload new video
+        // Show Next button immediately
+        $("#expReviewNextBtn").show().prop("disabled", false).removeClass("inactive");
 
-        // 🎯 BUFFER NEXT VIDEO IN REVIEW PHASE
-        if (nextTrial) {
-            const nextVideoPath = stimPath + nextTrial.file;
-            const bufferElement = document.getElementById('reviewBufferVid');
-            buffer_video(
-                bufferElement,
-                nextVideoPath
-            );
-        }
-
-        // Set up click + end handlers
-        $vid.off("click").on("click", handleReviewVideoClick);
-        $vid.off("ended").on("ended", handleVideoEnded);
-
-        $("#expReviewNextBtn").hide(); // hidden until video ends
         $("#expReviewNextBtn").off("click").on("click", function () {
             ExperimentTasks.end("NA");
         });
 
-        // Calculate progress for review phase
         const current = ExperimentTasks.trialNum - ExperimentTasks.totalLearningTrials;
         const total = ExperimentTasks.totalReviewTrials;
         $("#expReviewProgress").text(`${current} / ${total}`);
@@ -649,41 +633,18 @@ function renderTrialScreen(phase, last, thisTrial, nextTrial, stimPath) {
 
     // For TESTING phase (same structure as learning, but with response buttons)
     else if (phase === "testing") {
-        const videoPath = stimPath + thisTrial.file;
-        $("#expTestingVid").attr("src", videoPath);
+        const sentence = thisTrial.file;
+        $("#expTestingSentence").text(sentence);
 
         $("#expTestingBox").show();
         $("#expLearningBox, #expReviewBox").hide();
 
-        // Reset play count
-        const $vid = $("#expTestingVid");
-        $vid.data("playCount", 0);
-        $vid[0].load();  // reload new video
+        // Show response buttons immediately
+        $(".button-pair").show();
+        $("#expYesBtn, #expNoBtn").show().prop("disabled", false).removeClass("inactive");
 
-        // 🎯 BUFFER NEXT VIDEO IN TESTING PHASE
-        if (nextTrial) {
-            const nextVideoPath = stimPath + nextTrial.file;
-            const bufferElement = document.getElementById('testingBufferVid');
-            buffer_video(
-                bufferElement,
-                nextVideoPath
-            );
-        }
-
-        // Make sure video doesn't autoplay
-        $vid[0].pause();
-        $vid.prop('autoplay', false);
-
-        // Set up click + end handlers
-        $vid.off("click").on("click", handleVideoClick);
-        $vid.off("ended").on("ended", handleVideoEnded);
-
-        // Hide response buttons until video ends
-        $(".button-pair").hide();
-        $("#expYesBtn, #expNoBtn").hide().prop("disabled", true).addClass("inactive");
-
-        // ALWAYS reset guideline to initial text for each new video
-        $("#expTestingGuideline").text("Click the video to play");
+        // Update guideline
+        // $("#expTestingGuideline").text("Does this action belong to the same group as the first session?");
 
         // Set up response button handlers
         $("#expYesBtn, #expNoBtn").off("click").on("click", function () {
@@ -691,7 +652,11 @@ function renderTrialScreen(phase, last, thisTrial, nextTrial, stimPath) {
             ExperimentTasks.end(response);
         });
 
-        // Calculate progress for testing phase
+        // Start timing
+        if (ExperimentTasks.thisTrial) {
+            ExperimentTasks.thisTrial.startTime = Date.now();
+        }
+
         const current = ExperimentTasks.trialNum - ExperimentTasks.totalLearningTrials - ExperimentTasks.totalReviewTrials;
         const total = ExperimentTasks.totalTestingTrials;
         $("#expTestingProgress").text(`${current} / ${total}`);
