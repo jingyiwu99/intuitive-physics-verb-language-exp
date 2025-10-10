@@ -8,7 +8,7 @@
 
 // data saving
 const FORMAL = false;
-const EXPERIMENT_NAME = 'VerbCategorization';
+const EXPERIMENT_NAME = 'VerbCategorization_pureLanguage';
 const SUBJ_NUM_SCRIPT = '/get-subject-number';
 const SAVING_SCRIPT = '/save-data';
 const VISIT_FILE = 'visit_' + EXPERIMENT_NAME + '.txt';
