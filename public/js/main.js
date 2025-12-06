@@ -35,52 +35,52 @@ const PRACTICE_TESTING_LIST = [
 
 const EXPERIMENT_VIDEOS = {
     class1: {
-        lift: ["The person lifts a stack of towels.", "The person lifts a dumbbell by curling their arm at the elbow.",
-            "The person lifts a box upward.", "The person lifts a plastic bag."],
-        lower: ["The person lowers a cup.", "The person lowers a bowl.",
-            "The person lowers a trash bag.", "The person lowers a stuffed animal."],
-        pull: ["The person pulls the door.", "The person pulls a loose thread from their sweater.",
-            "The person pulls the laptop closer.", "The person pulls luggage."],
-        push: ["The person pushes a wheeled chair.", "The person pushes a pile of clothes to the other side.",
-            "The person pushes a stack of hardcover.", "The person pushes the door."],
-        tote: ["The person totes a heavy backpack across the street.", "The person totes a bulky shopping bag across the pavement.",
-            "The person totes a bucket filled with water across the room.", "The person totes a stuffed tote bag across the lobby."]
+        lift: ["Alex lifts a stack of towels to the shelf.", "Anna lifts a dumbbell to her shoulder.",
+            "Brian lifts a box with both hands.", "Emily lifts a plastic bag from the table."],
+        lower: ["David lowers a cup onto the table.", "Grace lowers a bowl by the rim.",
+            "Eric lowers a bag from the counter.", "Jessica lowers a stuffed animal a few inches."],
+        pull: ["Jason pulls the door open.", "Laura pulls a loose thread from her sweater.",
+            "Kevin pulls the laptop closer.", "Megan pulls luggage across the hallway."],
+        push: ["Mark pushes a wheeled chair across the room.", "Rachel pushes a pile of clothes to the other side.",
+            "Nathan pushes a stack of hardcover books farther.", "Sarah pushes the door with her elbow."],
+        tote: ["Ryan totes a heavy backpack across the street.", "Tina totes a bulky shopping bag to the car.",
+            "Thomas totes a bucket filled with water a few steps.", "Vanessa totes a stuffed bag by its handles."]
     },
     class2: {
-        flick: ["The person flicks a bread crumb.", "The person flicks a marble.",
-            "The person flicks a piece of dirt off of their shirt.", "The person flicks a small crumpled paper ball."],
-        kick: ["The person kicks the soccer ball.", "The person kicks an inflatable ball into the air.",
-            "The person kicks an empty bottle.", "The person kicks the door open."],
-        shove: ["The person shoves a shopping cart.", "The person shoves the heavy gate open.",
-            "The person shoves the punching bag.", "The person shoves a freestanding sign."],
-        slide: ["The person slides a notebook across a table.", "The person slides an ice cube across a smooth table.",
-            "The person slides a pen across the desk.", "The person slides a bar of soap across the table."],
-        throw: ["The person throws a notebook into their backpack.", "The person throws a used tea bag in the trash can.",
-            "The person throws the paper airplane.", "The person throws glitter."]
+        flick: ["Anna flicks a bread crumb with her fingers.", "Alex flicks a marble across the floor.",
+            "Brian flicks a piece of dirt off his shirt.", "Emily flicks a small crumpled paper ball toward the trash bin."],
+        kick: ["David kicks the soccer ball across the field.", "Grace kicks an inflatable ball into the air.",
+            "Eric kicks an empty bottle under the bench.", "Jessica kicks the door ajar."],
+        shove: ["Jason shoves a shopping cart toward the entrance.", "Laura shoves the heavy gate open.",
+            "Kevin shoves the punching bag against the wall.", "Megan shoves a freestanding sign over."],
+        slide: ["Mark slides a notebook across a table.", "Rachel slides an ice cube to the edge of the table.",
+            "Nathan slides a pen a short distance.", "Sarah slides a bar of soap next to the sink."],
+        throw: ["Ryan throws a notebook into his backpack.", "Tina throws a tea bag away.",
+            "Thomas throws the paper airplane across the room.", "Vanessa throws glitter with both hands."]
     },
     class3:{
-        fasten: ["The person fastens the straps of the helmet.", "The person fastens the seat belt.",
-            "The person fastens the top of the trash bag.", "The person fastens an apron."],
-        pin: ["The person pins the extra fabric to their shirt.", "The person pins a sheet of paper to the wall.",
-            "The person pins a name tag to their shirt.", "The person pins the photos to the board."],
-        stick: ["The person sticks the sticker on the cover of the notebook.", "The person sticks a playing card to their forehead.",
-            "The person sticks an adhesive hook onto the wall.", "The person sticks a Post-it note to the laptop."],
-        strap: ["The person straps a suitcase with a luggage strap.", "The person straps a stuffed animal to a chair.",
-            "The person straps a pile of books together.", "The person straps a box to the trolley."],
-        tape: ["The person tapes a piece of paper to the wall.", "The person tapes a spoon onto the side of a glass jar.",
-            "The person tapes a torn page back into the damaged notebook.", "The person tapes a leaf onto the cover of the notebook."]
+        fasten: ["Anna fastens the straps of the helmet under her chin.", "Alex fastens the seat belt securely.",
+            "Brian fastens the top of the trash bag shut.", "Emily fastens an apron around her waist."],
+        pin: ["David pins the extra fabric tightly.", "Grace pins a sheet of paper with a thumbtack.",
+            "Eric pins a name tag to his shirt.", "Jessica pins the photos on the bulletin board."],
+        stick: ["Jason sticks the sticker on the cover of the notebook.", "Laura sticks a playing card to her forehead.",
+            "Kevin sticks an adhesive hook to the wall.", "Megan sticks a Post-it note on the screen."],
+        strap: ["Mark straps a suitcase with a luggage strap.", "Rachel straps a stuffed animal to a chair.",
+            "Nathan straps a pile of books together.", "Sarah straps a box on."],
+        tape: ["Ryan tapes a piece of paper to the wall.", "Tina tapes a small box closed.",
+            "Thomas tapes a torn page back into the damaged notebook.", "Vanessa tapes a leaf with clear tape."]
     },
     class4: {
-        chip: ["The person chips a piece off the chocolate bar.", "The person chips a piece off the brick.",
-            "The person chips the edge of the plate.", "The person chips at the ice."],
-        crush: ["The person crushes an empty can.", "The person crushes a cracker.",
-            "The person crushes a paper cup with their foot.", "The person crushes a paper origami."],
-        rip: ["The person rips a sheet of paper in half.", "The person rips a piece of cloth.",
-            "The person rips open a envelope along the perforated line.", "The person rips petals off of a flower."],
-        shatter: ["The person shatters a vase.", "The person shatters the a mirror.",
-            "The person shatters a glass bottle.", "The person shatters a porcelain spoon."],
-        snap: ["The person snaps a chopstick in half.", "The person snaps a stick.",
-            "The person snaps a cookie.", "The person snaps a piece of bread."]
+        chip: ["Alex chips a piece off the chocolate bar.", "Anna chips the wood with a chisel.",
+            "Brian chips plaster onto the table.", "Emily chips the stone block to pieces."],
+        crush: ["David crushes an empty can completely.", "Grace crushes a cracker on the plate.",
+            "Eric crushes a paper cup with his foot.", "Jessica crushes origami into a crumpled ball."],
+        rip: ["Jason rips a sheet of paper in half.", "Laura rips a piece of cloth with both hands.",
+            "Kevin rips an envelope along the perforated line.", "Megan rips petals off of a flower."],
+        shatter: ["Mark shatters a vase by accident.", "Rachel shatters a mirror against the wall.",
+            "Nathan shatters a glass bottle with great force.", "Sarah shatters a porcelain spoon into pieces."],
+        snap: ["Ryan snaps a chopstick in anger.", "Tina snaps a stick with both hands.",
+            "Thomas snaps a cookie in half.", "Vanessa snaps a piece of bread in two."]
     }
 };
 
@@ -144,10 +144,10 @@ $(document).ready(function() {
     subj = new Subject(subj_options);
     subj.id = subj.getID(ID_GET_VARIABLE_NAME);
     console.log(subj.id);
-    // if (!subj.id) {
-    //     subj.id = 'testuser';
-    //     subj.validID = true;
-    // }// if part is for testing on local server, needed to be removed later
+    if (!subj.id) {
+        subj.id = 'testuser';
+        subj.validID = true;
+    }// if part is for testing on local server, needed to be removed later
 
     subj.saveVisit();
     if (subj.phone) {
@@ -343,7 +343,7 @@ INSTRUCTIONS[15] = [false, false, "Remember: The category from the practice is j
 // Main Experiment
 INSTRUCTIONS[16] = [false, false, "The real experiment  consists of three sessions."];
 INSTRUCTIONS[17] = [false, false, "In the first session, you will read "+ ExpLearningTrials +" descriptions of actions that belong to the same category."];
-INSTRUCTIONS[18] = [false, false, "Please read the description carefully, and click \"Next\" to continue."];
+INSTRUCTIONS[18] = [false, false, "Please read the descriptions carefully, and click \"Next\" to continue."];
 INSTRUCTIONS[19] = [false, false, "Pay attention to the commonness of these actions described in the sentences &mdash; this will help your categorization later."];
 INSTRUCTIONS[20] = [false, false, "Now, let's begin by reading "+ ExpLearningTrials +" descriptions of actions."];
 INSTRUCTIONS[21] = [show_experiment_learning, false, ""];
