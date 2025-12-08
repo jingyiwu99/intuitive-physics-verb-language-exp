@@ -54,7 +54,7 @@ const EXPERIMENT_VIDEOS = {
         shove: ["Jason shoves a shopping cart toward the entrance.", "Laura shoves the heavy gate open.",
             "Kevin shoves the punching bag against the wall.", "Megan shoves a freestanding sign over."],
         slide: ["Mark slides a notebook across a table.", "Rachel slides an ice cube to the edge of the table.",
-            "Nathan slides a pen a short distance.", "Sarah slides a bar of soap next to the sink."],
+            "Nathan slides a pen into the box.", "Sarah slides a bar of soap next to the sink."],
         throw: ["Ryan throws a notebook into his backpack.", "Tina throws a tea bag away.",
             "Thomas throws the paper airplane across the room.", "Vanessa throws glitter with both hands."]
     },
@@ -144,10 +144,10 @@ $(document).ready(function() {
     subj = new Subject(subj_options);
     subj.id = subj.getID(ID_GET_VARIABLE_NAME);
     console.log(subj.id);
-    if (!subj.id) {
-        subj.id = 'testuser';
-        subj.validID = true;
-    }// if part is for testing on local server, needed to be removed later
+    // if (!subj.id) {
+    //     subj.id = 'testuser';
+    //     subj.validID = true;
+    // }// if part is for testing on local server, needed to be removed later
 
     subj.saveVisit();
     if (subj.phone) {
